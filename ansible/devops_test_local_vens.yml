@@ -8,7 +8,5 @@
   become_method: sudo
   roles:
     - { role: vens_test }
-  # vars_files:
-  #   - vars/users.yml
 
 ...

@@ -2,13 +2,11 @@
 # Vens_test Playbook config
 
 - name: Vens install
-  hosts: all # devops_test_remote
+  hosts: devops_test_remote
   become: true
   become_user: root
   become_method: sudo
   roles:
     - { role: vens_test }
-  # vars_files:
-  #   - vars/users.yml
-
+    
 ...
