@@ -2,7 +2,7 @@
 # Vens_test Playbook config
 
 - name: Vens install
-  hosts: devops_test_remote
+  hosts: all # devops_test_remote
   become: true
   become_user: root
   become_method: sudo
