@@ -1,9 +1,9 @@
 name: Ansible CI/CD
 
-on:
-  workflow_dispatch:
-    branches:
-      - main
+on: [push]
+  # workflow_dispatch:
+  #   branches:
+  #     - main
 
 env:
   VAULT_PASSWORD: ${{ secrets.VAULT_PASSWORD }}
