@@ -1,0 +1,23 @@
+name: Ansible CI/CD
+
+on:
+  workflow_dispatch:
+    branches:
+      - main
+
+env:
+  VAULT_PASSWORD: ${{ secrets.VAULT_PASSWORD }}
+
+jobs:
+  Ansible_build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run playbook > devops_test_local_vens
+      uses: dawidd6/action-ansible-playbook@v2
+      with:
+        playbook: devops_test_local_vens.yml
+        directory: ./ansible/
+        vault_password: ${{ env.VAULT_PASSWORD }}
