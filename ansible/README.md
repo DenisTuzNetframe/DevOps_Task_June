@@ -20,31 +20,31 @@
 ================================================================================
 ## Ansible Map
 ================================================================================
-
-'./ansible/'
-'|'
-'├── ansible.cfg'
-'├── devops_test_local_vens.yml'
-'├── devops_test_remote_vens.yml'
-'|'
-'├── inventory'
-'│   ├── group_vars'
-'│   │   ├── devops_test_local.yml'
-'│   │   └── devops_test_remote.yml'
-'│   └── hosts.yml'
-'|'
-'├── roles'
-'│   └── vens_test'
-'│       ├── files'
-'│       │   ├── test2.txt'
-'|       |   |'
-'│       │   └── test.txt'
-'│       ├── tasks'
-'│       │   └── main.yml'
-'│       └── vars'
-'│           └── main.yml'
-'└── ssh_key'
-'    └── id_rsa'
+>
+./ansible/
+|
+├── ansible.cfg
+├── devops_test_local_vens.yml
+├── devops_test_remote_vens.yml
+|
+├── inventory
+│   ├── group_vars
+│   │   ├── devops_test_local.yml
+│   │   └── devops_test_remote.yml
+│   └── hosts.yml
+|
+├── roles
+│   └── vens_test
+│       ├── files
+│       │   ├── test2.txt
+|       |   |
+│       │   └── test.txt
+│       ├── tasks
+│       │   └── main.yml
+│       └── vars
+│           └── main.yml
+└── ssh_key
+    └── id_rsa
 
 ================================================================================
 ================================================================================
