@@ -17,6 +17,8 @@
   -  Example in './devops_test_remote_vens.yml'
 - 4. Run 'ansible-playbook <example>.yml' from './ansible'
 
+> Also add an action in './DevOps_Task_June/.github/workflows/ansible-ci.yml'
+
 ================================================================================
 ## Ansible Map
 ================================================================================

@@ -1,0 +1,12 @@
+---
+# Vens_test Playbook config
+
+- name: Vens install
+  hosts: devops_test_local
+  become: true
+  become_user: root
+  become_method: sudo
+  roles:
+    - { role: vens_test }
+
+...

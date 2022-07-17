@@ -1,0 +1,11 @@
+---
+# Vars file
+
+venv_python_executable: "python3"
+destination_path: /opt/python_venvs
+mode: 0666
+virtualenv_default_os_packages:
+    - python3-venv
+    - python3-setuptools
+
+...

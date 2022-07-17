@@ -1,0 +1,35 @@
+---
+# Tasks
+
+# test task
+- block: # Block for Debian ====================================================
+
+    - name: Install required OS packages to create virtual environment
+      package:
+        name: "{{ item }}"
+        state: "present"
+      with_items: "{{ virtualenv_default_os_packages }}"
+
+    - name: Install virtual environment
+      command: >-
+        {{ venv_python_executable }}
+        -m venv
+        "{{ destination_path }}/{{ item | basename | splitext | first }}"
+      with_fileglob: "*.txt"
+
+    # - name: Copy requirements
+    #   copy:
+    #     src: "{{ item }}"
+    #     dest: "{{ destination_path }}/{{ item | basename | splitext | first }}/requirements.txt"
+    #     mode: "{{ mode }}"
+    #   with_fileglob: "*.txt"
+
+    - name: install virtualenv requirements
+      pip:
+        requirements: "{{ item }}" # "{{ destination_path }}/{{ item | basename | splitext | first }}/requirements.txt"
+        virtualenv: "{{ destination_path }}/{{ item | basename | splitext | first }}"
+      with_fileglob: "*.txt"
+
+  when: ansible_os_family == "Debian"
+
+...
