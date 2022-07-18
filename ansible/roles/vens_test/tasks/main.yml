@@ -26,7 +26,7 @@
 
     - name: install virtualenv requirements
       pip:
-        requirements: "{{ item }}" # "{{ destination_path }}/{{ item | basename | splitext | first }}/requirements.txt"
+        requirements: "{{ item }}"
         virtualenv: "{{ destination_path }}/{{ item | basename | splitext | first }}"
       with_fileglob: "*.txt"
 
